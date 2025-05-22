@@ -383,6 +383,12 @@ func (z *Element) Halve() {
 
 }
 
+// FromMont
+func (z *Element) FromMont() *Element {
+	fromMont(z)
+	return z
+}
+
 // fromMont converts z in place (i.e. mutates) from Montgomery to regular representation
 // sets and returns z = z * 1
 func (z *Element) fromMont() *Element {
